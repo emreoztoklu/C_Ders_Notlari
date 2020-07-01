@@ -33,7 +33,8 @@ _double_ türden bir nesnenin adresi anlamına gelene bir ifadenin türü _doubl
 Her nesne türü için ona karşılık gelen bir adres türü vardır.
 
 #### gösterici değişkenler
-Bir gösterici değişken belirli türden bir nesnenin adresini tutabilen bir değişkendir. Bir gösterici değişken aşağıdaki gibi tanımlanabilir:
+Bir gösterici değişken belirli türden bir nesnenin adresini tutabilen bir değişkendir. 
+Bir gösterici değişken aşağıdaki gibi tanımlanabilir:
 
 ```
 int *ptr;
@@ -52,7 +53,7 @@ int * p1, p2;
 ```
 
 Geçerli bu bildirimde yalnızca _p1_ bir gösterici değişkendir. 
-_p1_ değişkeninin türü _int *_ _p2_ değişkenin türü ise _int_ türüdür.
+_p1_ değişkeninin türü _int *_ _p2_ değişkenin türü ise _int_'tir.
 Yani yukarıdaki bildirim aşağıdaki bildirimlere eşdeğerdir:
 
 ```
@@ -74,9 +75,11 @@ Yukarıdaki bildirimde
 - _a_, elemanları _int_ türden olan _10_ elemanlı bir dizi
 - _b_, elemanları _int *_ türden olan _20_ elemanlı bir dizi
 
+Bir gösterici değişken global ya da yerel olabilir. Yerel bir gösterici değişken otomatik ömürlü ya da statik ömürlü olabilir. İlk değer verilmeyen otomatik ömürlü bir gösterici değişken hayata çöp değerle başlar.
+
 #### gösterici değişkenlere ilk değer verilmesi
 
-Gösterici değişkenlere de diğer tüm değişkenlerde olduğu gibi ilk değer verilebilir, atama yapılabilir.
+Gösterici değişkenlere de diğer tüm değişkenlerde olduğu gibi ilk değer verilebilir, atama yapılabilir. Göstericilere ilk değer veren ya da atanan ifadelerin uygun türden adres olması gerekir.
 
 ```
 int main()
@@ -95,7 +98,7 @@ Daha sonra _ptr_ değişkenine _&y_ ifadesi atanıyor.
 
 #### gösterici değişkenlerin bellekte kapladığı alan (storage) 
 Nesne adresleri için bellekte ayrılacak yer türden bağımsız olarak aynı büyüklüktedir. 
-Bir başka deyişle tüm nesne adresi türlerine ilişkin _sizeof_ değeri aynıdır. _(2, 4 ya da 8 byte gibi)_.
+Bir başka deyişle tüm nesne adresi türlerine ilişkin _sizeof_ değeri aynıdır. _(2, 4 ya da 8 byte gibi)_. 
 Aşağıdaki programı derleyip çalıştırın:
 
 ```
@@ -122,7 +125,7 @@ Gösterici operatörleri şunlardır:
 * indeks operatörü __(\[ ])__ _(index operator - subscript operator)_
 * ok operatörü __(->)__ _(member selection operator - arrow operator)_
 
-ok operatörü yapı türünden adreslerle kullanıldığı için bu operatör "yapılar" konusunda ayrıntılı olarak incelenecek.
+ok operatörü yapı türünden adreslerle kullanıldığı için bu operatör* "yapılar" konusunda ayrıntılı olarak inceleyeceğiz.
 
 #### Adres operatörü
 Adres operatörü _(adress of operator)_, ön ek konumunda tek terimli _(unary prefix)_ bir operatördür.
@@ -130,7 +133,7 @@ Oluşturmuş olduğumuz operatör öncelik tablosunun ikinci seviyesinde yer al�
 Bu operatörün  ürettiği değer terimi olan nesnenin adresidir. 
 Adres operatörünün terimi mutlaka bir nesne _(L value expression)_ olmalıdır. 
 Çünkü yalnızca nesnelerin -sol taraf değerlerinin- adreslerinden söz edilebilir. 
-Adres operatörünün teriminin nesne olmayan bir ifade olması geçersizdir.
+Bu operatörün teriminin nesne olmayan bir ifade yani bir "sağ taraf değeri" olması geçersizdir.
 
 ```
 int ival = 0;
