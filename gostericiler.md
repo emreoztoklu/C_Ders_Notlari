@@ -43,6 +43,28 @@ Böyle bir değişken için aşağıdaki nitelemeleri kullanabiliriz:
 * _ptr_ değişkeninin türü _int *_ türüdür. Bu tür İngilizce'de şöyle ifade edilir: _"pointer to int"_
 * _ptr_ değişkeninin değeri _int_ türden bir nesnenin adresi olacaktır.
 
+
+
+Bildirimde kullanılan \* atomu yalnızca önüne geldiği ismi nitelemektedir. 
+Aşağıdaki bildirime bakalım:
+
+```
+int * p1, p2;
+```
+
+Geçerli bu bildirimde yalnızca _p1_ bir gösterici değişkendir. 
+_p1_ değişkeninin türü _int *_ _p2_ değişkenin türü ise _int_ türüdür.
+Yani yukarıdaki bildirim aşağıdaki bildirimlere eşdeğerdir:
+
+```
+int * p1;
+int p2;
+```
+
+Böyle bildirimde kullanılan * ve [] atomları listedeki isimlerin tamamını değil yalnızca önlerine ya da arkalarına geldiği isimleri nitelemektedir. 
+
+#### gösterici değişkenlere ilk değer verilmesi
+
 Gösterici değişkenlere de diğer tüm değişkenlerde olduğu gibi ilk değer verilebilir, atama yapılabilir.
 
 ```
@@ -61,8 +83,8 @@ Yukarıdaki kodda _ptr_ isimli değişken tanımlanıyor ve bu değişkene _&x_ 
 Daha sonra _ptr_ değişkenine _&y_ ifadesi atanıyor.
 
 #### gösterici değişkenlerin bellekte kapladığı alan (storage) 
-Nessne adresleri için bellekte ayrılacak yer türden bağımsız olarak aynı büyüklüktedir. 
-Bir başka deyişle tüm nesne adresi türlerine ilişkin sizeof değeri aynıdır. _(2, 4 ya da 8 byte gibi)_.
+Nesne adresleri için bellekte ayrılacak yer türden bağımsız olarak aynı büyüklüktedir. 
+Bir başka deyişle tüm nesne adresi türlerine ilişkin _sizeof_ değeri aynıdır. _(2, 4 ya da 8 byte gibi)_.
 Aşağıdaki programı derleyip çalıştırın:
 
 ```
