@@ -18,7 +18,8 @@ C dilinde  nesnelerin _(değişkenlerin)_ adresleri değişkenlerde tutulabilir,
 Fonksiyonların geri dönüş değeri adres olabilir.
 Bir dizinin elemanları adres tutan değişkenler olabilir. 
 
-Peki bir değişkenin adresi dendiğinde ne anlaşılmalıdır. Bir nesnenin adresi nasıl bir soyutlamadır?
+Peki bir değişkenin adresi dendiğinde ne anlaşılmalıdır. 
+Bir nesnenin adresi nasıl bir soyutlamadır?
 Nasıl _Necati Ergin_'in adresi onun nerede oturduğu bilgisi ise bir değişkenin adresi de o değişkenin programın çalışma zamanında bellekte nerede olduğunu belirten bir bilgidir.
 C dilinde nesnelere adresleri yoluyla erişebilir onları adresleri yoluyla kullanabiliriz.
 
@@ -43,8 +44,6 @@ Böyle bir değişken için aşağıdaki nitelemeleri kullanabiliriz:
 * _ptr_ değişkeninin türü _int *_ türüdür. Bu tür İngilizce'de şöyle ifade edilir: _"pointer to int"_
 * _ptr_ değişkeninin değeri _int_ türden bir nesnenin adresi olacaktır.
 
-
-
 Bildirimde kullanılan \* atomu yalnızca önüne geldiği ismi nitelemektedir. 
 Aşağıdaki bildirime bakalım:
 
@@ -61,7 +60,8 @@ int * p1;
 int p2;
 ```
 
-Böyle bildirimde kullanılan \* ve \[] atomları listedeki isimlerin tamamını değil yalnızca önlerine ya da arkalarına geldiği isimleri nitelemektedir. Aşağıdaki bildirimlere bakalım:
+Böyle bildirimde kullanılan \* ve \[] atomları listedeki isimlerin tamamını değil yalnızca önlerine ya da arkalarına geldiği isimleri nitelemektedir. 
+Aşağıdaki bildirimlere bakalım:
 
 ```
 int x, *p, a[10], *b[20];
@@ -69,13 +69,10 @@ int x, *p, a[10], *b[20];
 
 Yukarıdaki bildirimde 
 
-- _x_, int türden bir değişken
+- _x_, _int_ türden bir değişken
 - _p_, int * türden değişken
-- _a_, elemanları int türden olan 10 elemanlı bir dizi
-- _b_, elemanları int * türden olan 20 elemanlı bir dizi
-
-
-
+- _a_, elemanları _int_ türden olan _10_ elemanlı bir dizi
+- _b_, elemanları _int *_ türden olan _20_ elemanlı bir dizi
 
 #### gösterici değişkenlere ilk değer verilmesi
 
@@ -114,8 +111,6 @@ int main()
 	printf("sizeof (double*)    = %zu\n", sizeof(double *));
 }
 ```
-
-
 
 #### Gösterici Operatörleri (Pointer Operators)
 
