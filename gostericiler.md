@@ -7,9 +7,9 @@ Adres donanımsal bir kavram olmakla birlikte birçok programlama dilinin sentak
 _C_ dilinde ise adresler ve adreslere yönelik işlemler yoğun olarak kullanılır. 
 
 <br>
-Adresler temel olarak iki kategoriye ayrılmaktadır:
-* Nesne adresleri _(object pointers)_
-* Fonksiyon adresleri _(function pointers)_
+Adresler temel olarak iki kategoriye ayrılmaktadır:</br>
+- Nesne adresleri _(object pointers)_
+- Fonksiyon adresleri _(function pointers)_
 
 Fonksiyon adreslerini daha sonra ele alacağız. </br>
 
