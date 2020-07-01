@@ -22,11 +22,13 @@ Peki bir değişkenin adresi dendiğinde ne anlaşılmalıdır. Bir nesnenin adr
 Nasıl _Necati Ergin_'in adresi onun nerede oturduğu bilgisi ise bir değişkenin adresi de o değişkenin programın çalışma zamanında bellekte nerede olduğunu belirten bir bilgidir.
 C dilinde nesnelere adresleri yoluyla erişebilir onları adresleri yoluyla kullanabiliriz.
 
-Bir ifade _(expression)_ bir nesnenin adresi anlamına gelebilir. Yani bazı ifadelerin değeri adrestir. </br>
+Bir ifade _(expression)_ bir nesnenin adresi anlamına gelebilir. 
+Yani bazı ifadelerin değeri adrestir. </br>
 _T_ bir nesnenin türü olmak üzere
 _T_ türünden bir nesnenin adresi anlamına gelen ifadenin türü C dilinde _T *_ türü olarak kabul edilir.
 
-Örneğin _int_ türden bir nesnenin adresi anlamına gelene bir ifadenin türü _int *_,  _double_ türden bir nesnenin adresi anlamıa gelene bir ifadenin türü _double *_ türüdür.
+Örneğin _int_ türden bir nesnenin adresi anlamına gelene bir ifadenin türü _int *_,  
+_double_ türden bir nesnenin adresi anlamına gelene bir ifadenin türü _double *_ türüdür.
 Her nesne türü için ona karşılık gelen bir adres türü vardır.
 
 #### gösterici değişkenler
@@ -41,7 +43,7 @@ Böyle bir değişken için aşağıdaki nitelemeleri kullanabiliriz:
 * _ptr_ değişkeninin türü _int *_ türüdür. Bu tür İngilizce'de şöyle ifade edilir: _"pointer to int"_
 * _ptr_ değişkeninin değeri _int_ türden bir nesnenin adresi olacaktır.
 
-Gösterici değişkenlere de diğer tüm değişkenlerde olduğu gibi ilk değer verilebilir:
+Gösterici değişkenlere de diğer tüm değişkenlerde olduğu gibi ilk değer verilebilir, atama yapılabilir.
 
 ```
 int main()
@@ -56,16 +58,33 @@ int main()
 ```
 
 Yukarıdaki kodda _ptr_ isimli değişken tanımlanıyor ve bu değişkene _&x_ ifadesi ile ilk değer veriliyor. 
-Daha sonra _ptr_ değişkenine &y ifadesi atanıyor.
+Daha sonra _ptr_ değişkenine _&y_ ifadesi atanıyor.
 
 #### gösterici değişkenlerin bellekte kapladığı alan (storage) 
+Nessne adresleri için bellekte ayrılacak yer türden bağımsız olarak aynı büyüklüktedir. 
+Bir başka deyişle tüm nesne adresi türlerine ilişkin sizeof değeri aynıdır. _(2, 4 ya da 8 byte gibi)_.
+Aşağıdaki programı derleyip çalıştırın:
 
+```
+int main()
+{
+	printf("sizeof (char)       = %zu\n", sizeof(char ));
+	printf("sizeof (char *)     = %zu\n", sizeof(char *));
+	printf("sizeof (short)      = %zu\n", sizeof(short));
+	printf("sizeof (short *)    = %zu\n", sizeof(short *));
+	printf("sizeof (int)        = %zu\n", sizeof(int));
+	printf("sizeof (int *)      = %zu\n", sizeof(int *));
+	printf("sizeof (double)     = %zu\n", sizeof(double));
+	printf("sizeof (double*)    = %zu\n", sizeof(double *));
+}
+```
 
 
 
 #### Gösterici Operatörleri (Pointer Operators)
 
-C dilinin bazı operatörleri adres verileri ile ilgili olarak kullanılır. Gösterici operatörleri şunlardır:
+_C_ dilinin bazı operatörleri adres verileri ile ilgili olarak kullanılır. 
+Gösterici operatörleri şunlardır:
 
 * içerik operatörü __(\*)__  _(indirection operator - dereferencing operator)_
 * adres operatörü __(&)__ _(address of operator)_
@@ -76,8 +95,8 @@ ok operatörü yapı türünden adreslerle kullanıldığı için bu operatör "
 
 #### Adres operatörü
 Adres operatörü _(adress of operator)_, ön ek konumunda tek terimli _(unary prefix)_ bir operatördür.
-Oluşturmuş olduğunuz operatör öncelik tablosunun ikinci seviyesinde yer alır. 
-Bu operatörün  ürettiği değer, terimi olan nesnenin adresidir. 
+Oluşturmuş olduğumuz operatör öncelik tablosunun ikinci seviyesinde yer alır. 
+Bu operatörün  ürettiği değer terimi olan nesnenin adresidir. 
 Adres operatörünün terimi mutlaka bir nesne _(L value expression)_ olmalıdır. 
 Çünkü yalnızca nesnelerin -sol taraf değerlerinin- adreslerinden söz edilebilir. 
 Adres operatörünün teriminin nesne olmayan bir ifade olması geçersizdir.
@@ -91,10 +110,11 @@ gibi bir tanımlamadan sonra yazılan
 &k
 ```
 
-ifadesini ele alalım. Bu ifadenin ürettiği değer _int_ türden bir adres bilgisidir.
+ifadesini ele alalım. 
+Bu ifadenin ürettiği değer _int_ türden bir adres bilgisidir.
 Bu ifadenin türü _(int \*)_ türüdür.
 
-_&_ operatörü diğer tek terimli _(unary)_ operatörler gibi oluşturduğumuz operatör öncelik tablosunun 2. seviyesinde bulunur. 
+_&_ operatörü diğer tek terimli _(unary)_ operatörler gibi oluşturduğumuz operatör öncelik tablosunun _2._ seviyesinde bulunur. 
 Bu öncelik seviyesinin öncelik yönünün "sağdan sola" _(right associative)_ olduğunu hatırlayın.
 Bir gösterici değişken bir adres bilgisi tutan bir nesne olduğuna göre, bir gösterici değişkene adres operatörünün ürettiği bir adres verisi atanabilir.
 
@@ -109,7 +129,7 @@ _ptr_ nesnesinin değeri _x_ değişkeninin adresidir.
 _ptr_ nesnesi _x_ değişkeninin adresini tutmaktadır.
 _ptr_ değişkeni x'i göstermektedir. _(ptr points to x)_
 
-Adres operatörü ile elde edilen adres, aynı türden bir gösterici değişkene atanmalıdır. 
+Adres operatörü ile elde edilen adres aynı türden bir gösterici değişkene atanmalıdır. 
 Örneğin aşağıdaki programda bir gösterici değişkene farklı türden bir adres atanıyor:
 
 ```
@@ -120,16 +140,19 @@ p = &ch; /* Yanlış */
 
 C dilinde farklı türden adreslerin birbirine atanması sentaks açısından geçerli olsa da doğru değildir.
 
-Adres operatörü ile oluşturulan ifade bir _"sol taraf değeri"_ değildir. Örneğin:
+Adres operatörü ile oluşturulan ifade bir _"sol taraf değeri"_ değildir. 
+Sol taraf değeri beklenen bir yerde böyle bir ifade kullanılamaz. 
+Örneğin:
 
 ```
 int x;
-++&x /* Geçersiz */
+++&x     /* Geçersiz */
 ```
 
 gibi bir kod geçersizdir. 
 Arttırma _(increment)_ operatörünün terimi nesne gösteren bir ifade olmalıdır. 
-Yukarıdaki ifadede _++_ operatörünün terimi olan _&x_ ifadesi bir nesne değildir. Yalnızca bir adres değeridir.
+Yukarıdaki ifadede _++_ operatörünün terimi olan _&x_ ifadesi bir nesne değildir. 
+Yalnızca bir adres değeridir.
 
 #### adres değerlerinin standart çıkış akımına yazdırılması
 
@@ -173,8 +196,8 @@ C dilinde dizi isimleri bir ifade içinde kullanıldığında derleyici tarafın
 ```
 char str[20];
 ```
-gibi bir dizi tanımlamasında sonra, dizinin ismi olan str bir işleme sokulduğunda bu dizinin ilk elemanının adresine dönüştürülür.
+gibi bir dizi tanımlamasında sonra, dizinin ismi olan _str_ bir işleme sokulduğunda bu dizinin ilk elemanının adresine dönüştürülür.
 
 Bu dönüşüm neticesinde _str_ ifadesi ile _&str[0]_ ifadesi aynı adres olarak kullanılabilir.
 
-Bu durumdsa bir dizinin adresi bir gösterici değişkene bir dizinin adresi ile ilk değer verilebilir ya da gösterici değişkenlere    
+Bu durumda bir dizinin adresi bir gösterici değişkene bir dizinin adresi ile ilk değer verilebilir ya da gösterici değişkenlere    
