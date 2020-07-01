@@ -4,8 +4,8 @@
 
 C dilinin bazı operatörleri adres verileri ile ilgili olarak kullanılır. Gösterici operatörleri şunlardır:
 
-* içerik işleci __(\*)__  _(indirection operator - dereferencing operator)_
-* adres işleci __(&)__ _(address of operator)_
+* içerik operatörü __(\*)__  _(indirection operator - dereferencing operator)_
+* adres operatörü __(&)__ _(address of operator)_
 * indeks operatörü __(\[ ])__ _(index operator - subscript operator)_
 * ok operatörü __(->)__ _(member selection operator - arrow operator)_
 
