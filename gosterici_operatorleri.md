@@ -17,3 +17,46 @@ Oluşturmuş olduğunuz operatör öncelik tablosunun ikinci seviyesinde yer al�
 Adres operatörünün terimi mutlaka bir nesne _(L value expression)_ olmalıdır. 
 Çünkü yalnızca nesnelerin -sol taraf değerlerinin- adreslerinden söz edilebilir. 
 Adres operatörünün teriminin nesne olmayan bir ifade olması geçersizdir.
+
+```
+int ival = 0;
+```
+gibi bir tanımlamadan sonra yazılan
+
+```
+&k
+```
+
+ifadesini ele alalım. Bu ifadenin ürettiği değer _int_ türden bir adres bilgisidir.
+Bu ifadenin türü _(int \*)_ türüdür.
+
+& operatörü diğer tek terimli _(unary)_ operatörler gibi, işleç öncelik tablomuzun 2. seviyesinde bulunur. 
+Bu öncelik seviyesinin öncelik yönünün "sağdan sola" _(right associative)_ olduğunu biliyorsunuz.
+Bir gösterici değişken bir adres bilgisi tutan bir nesne olduğuna göre, bir gösterici değişkene adres operatörünün ürettiği bir adres verisi atanabilir.
+```
+int ival = 20;
+int *ptr;
+ptr = &ival;
+```
+
+Böyle bir atamadan sonra şunlar söylenebilir:
+_ptr_ nesnesinin değeri _x_ değişkeninin adresidir. 
+_ptr_ nesnesi _x_ değişkeninin adresini tutmaktadır.
+Adres operatörü ile elde edilen adres, aynı türden bir gösterici değişkene atanmalıdır. 
+Örneğin aşağıdaki programda bir gösterici değişkene farklı türden bir adres atanıyor:
+
+```
+char ch = 'x';
+int *p;
+p = &ch; /* Yanlış */
+```
+Tabi bu operatör ile oluşturulan ifade bir _"sol taraf değeri"_ değildir. Örneğin:
+
+```
+int x;
+++&x /* Geçersiz */
+```
+
+gibi bir kod geçersizdir. 
+Arttırma _(increment)_ operatörünün terimi nesne gösteren bir ifade olmalıdır. 
+Yukarıdaki ifadede _++_ operatörünün terimi olan &x ifadesi bir nesne değildir. Yalnızca bir adres değeridir.
