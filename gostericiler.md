@@ -8,8 +8,8 @@ _C_ dilinde ise adresler ve adreslere yönelik işlemler yoğun olarak kullanıl
 
 <br>
 Adresler temel olarak iki kategoriye ayrılmaktadır:
--Nesne adresleri _(object pointers)_
--Fonksiyon adresleri _(function pointers)_
+* Nesne adresleri _(object pointers)_
+* Fonksiyon adresleri _(function pointers)_
 
 Fonksiyon adreslerini daha sonra ele alacağız. </br>
 
