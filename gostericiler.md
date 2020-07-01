@@ -61,7 +61,21 @@ int * p1;
 int p2;
 ```
 
-Böyle bildirimde kullanılan * ve [] atomları listedeki isimlerin tamamını değil yalnızca önlerine ya da arkalarına geldiği isimleri nitelemektedir. 
+Böyle bildirimde kullanılan \* ve \[] atomları listedeki isimlerin tamamını değil yalnızca önlerine ya da arkalarına geldiği isimleri nitelemektedir. Aşağıdaki bildirimlere bakalım:
+
+```
+int x, *p, a[10], *b[20];
+```
+
+Yukarıdaki bildirimde 
+
+- _x_, int türden bir değişken
+- _p_, int * türden değişken
+- _a_, elemanları int türden olan 10 elemanlı bir dizi
+- _b_, elemanları int * türden olan 20 elemanlı bir dizi
+
+
+
 
 #### gösterici değişkenlere ilk değer verilmesi
 
