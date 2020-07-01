@@ -7,7 +7,7 @@ Adres donanımsal bir kavram olmakla birlikte birçok programlama dilinin sentak
 _C_ dilinde ise adresler ve adreslere yönelik işlemler yoğun olarak kullanılır. 
 
 <br>
-Adresler temel olarak iki kategoriye ayrılmaktadır:</br>
+Adresler temel olarak iki kategoriye ayrılmaktadır:
 - Nesne adresleri _(object pointers)_
 - Fonksiyon adresleri _(function pointers)_
 
@@ -54,7 +54,8 @@ int main()
 }
 ```
 
-Yukarıdaki kodda _ptr_ isimli değişken tanımlanıyor ve bu değişkene _&x_ ifadesi ile ilk değer veriliyor.
+Yukarıdaki kodda _ptr_ isimli değişken tanımlanıyor ve bu değişkene _&x_ ifadesi ile ilk değer veriliyor. 
+Daha sonra _ptr_ değişkenine &y ifadesi atanıyor.
 
 #### gösterici değişkenlerin bellekte kapladığı alan (storage) 
 
