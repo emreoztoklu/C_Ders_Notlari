@@ -19,7 +19,11 @@ Bir ifade _(expression)_ bir nesnenin adresi anlamına gelebilir. Yani bazı ifa
 _T_ bir nesnenin türü olmak üzere
 _T_ türünden bir nesnenin adresi anlamına gelen ifadenin türü C dilinde _T *_ türü olarak kabul edilir.
 
-Örneğin _int_ türden bir nesnenin adresi anlamına gelene bir ifadenin türü _int *_,  _double_ türden bir nesnenin adresi anlamıa gelene bir ifadenin türü _double *_ türüdür
+Örneğin _int_ türden bir nesnenin adresi anlamına gelene bir ifadenin türü _int *_,  _double_ türden bir nesnenin adresi anlamıa gelene bir ifadenin türü _double *_ türüdür.
+
+Peki bir değişkenin adresi dendiğinde ne anlaşılmalıdır. Bir nesnenin adresi nasıl bir soyutlamadır?
+Nasıl _Necati Ergin_'in adresi onun nerede oturduğu bilgisi ise bir değişkenin adresi de o değişkenin programın çalışma zamanında bellekte nerede olduğunu belirten bir bilgidir.
+C dilinde nesnelere adresleri yoluyla erişebilir onları adresleri yoluyla kullanabiliriz.
 
 #### Gösterici Operatörleri (Pointer Operators)
 
