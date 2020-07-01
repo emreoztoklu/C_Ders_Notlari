@@ -4,7 +4,8 @@
 
 _C_ dilinde _pointer_ sözcüğü _"adres"_ anlamında kullanılmaktadır. 
 Adres donanımsal bir kavram olmakla birlikte birçok programlama dilinin sentaksında yer almaz. 
-_C_ dilinde ise adresler ve adreslere yönelik işlemler yoğun olarak kullanılır.
+_C_ dilinde ise adresler ve adreslere yönelik işlemler yoğun olarak kullanılır. 
+
 <br>
 Adresler temel olarak iki kategoriye ayrılmaktadır:
 - Nesne adresleri _(object pointers)_
@@ -12,18 +13,21 @@ Adresler temel olarak iki kategoriye ayrılmaktadır:
 
 Fonksiyon adreslerini daha sonra ele alacağız. </br>
 
-C dilinde  nesnelerin _(değişkenlerin)_ adresleri değişkenlerde tutulabilir, fonksiyonlara argüman olarak gönderilebilir. Fonksiyonların geri dönüş değeri adres olabilir.
+C dilinde  nesnelerin _(değişkenlerin)_ adresleri değişkenlerde tutulabilir, fonksiyonlara argüman olarak gönderilebilir. 
+Fonksiyonların geri dönüş değeri adres olabilir.
 Bir dizinin elemanları adres tutan değişkenler olabilir. 
+
+Peki bir değişkenin adresi dendiğinde ne anlaşılmalıdır. Bir nesnenin adresi nasıl bir soyutlamadır?
+Nasıl _Necati Ergin_'in adresi onun nerede oturduğu bilgisi ise bir değişkenin adresi de o değişkenin programın çalışma zamanında bellekte nerede olduğunu belirten bir bilgidir.
+C dilinde nesnelere adresleri yoluyla erişebilir onları adresleri yoluyla kullanabiliriz.
 
 Bir ifade _(expression)_ bir nesnenin adresi anlamına gelebilir. Yani bazı ifadelerin değeri adrestir. </br>
 _T_ bir nesnenin türü olmak üzere
 _T_ türünden bir nesnenin adresi anlamına gelen ifadenin türü C dilinde _T *_ türü olarak kabul edilir.
 
 Örneğin _int_ türden bir nesnenin adresi anlamına gelene bir ifadenin türü _int *_,  _double_ türden bir nesnenin adresi anlamıa gelene bir ifadenin türü _double *_ türüdür.
+Her nesne türü için bir adres türü vardır.
 
-Peki bir değişkenin adresi dendiğinde ne anlaşılmalıdır. Bir nesnenin adresi nasıl bir soyutlamadır?
-Nasıl _Necati Ergin_'in adresi onun nerede oturduğu bilgisi ise bir değişkenin adresi de o değişkenin programın çalışma zamanında bellekte nerede olduğunu belirten bir bilgidir.
-C dilinde nesnelere adresleri yoluyla erişebilir onları adresleri yoluyla kullanabiliriz.
 
 #### Gösterici Operatörleri (Pointer Operators)
 
