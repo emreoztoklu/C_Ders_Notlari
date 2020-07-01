@@ -11,7 +11,7 @@ C dilinin bazı operatörleri adres verileri ile ilgili olarak kullanılır. Gö
 
 ok operatörü yapı türünden adreslerle kullanıldığı için bu operatör "yapılar" konusunda ayrıntılı olarak incelenecek.
 
-####Adres operatörü
+#### Adres operatörü
 Adres operatörü _(adress of operator)_, ön ek konumunda tek terimli _(unary prefix)_ bir operatördür.
 Oluşturmuş olduğunuz operatör öncelik tablosunun ikinci seviyesinde yer alır. Bu operatörün  ürettiği değer, terimi olan nesnenin adresidir. 
 Adres operatörünün terimi mutlaka bir nesne _(L value expression)_ olmalıdır. 
