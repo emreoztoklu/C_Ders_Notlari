@@ -2,12 +2,11 @@
 
 #### Gösterici Operatörleri (Pointer Operators)
 
-C dilinin bazı operatörleri adres verileri ile ilgili olarak kullanılır. Gösterici operatörleri
-Gösterici operatörleri 
+C dilinin bazı operatörleri adres verileri ile ilgili olarak kullanılır. Gösterici operatörleri şunlardır:
 
 * \* içerik işleci (*)  _(indirection operator - dereferencing operator)_
 * adres işleci (& ) _(address of operator)_
-* indeks operatörü (\[]) _(index operator - subscript operator)_
+* indeks operatörü (\[ ]) _(index operator - subscript operator)_
 * ok operatörü (->) _(member selection operator - arrow operator)_
 
 ok operatörü yapı türünden adreslerle kullanıldığı için bu operatör "yapılar" konusunda ayrıntılı olarak incelenecek.
