@@ -26,7 +26,39 @@ _T_ bir nesnenin türü olmak üzere
 _T_ türünden bir nesnenin adresi anlamına gelen ifadenin türü C dilinde _T *_ türü olarak kabul edilir.
 
 Örneğin _int_ türden bir nesnenin adresi anlamına gelene bir ifadenin türü _int *_,  _double_ türden bir nesnenin adresi anlamıa gelene bir ifadenin türü _double *_ türüdür.
-Her nesne türü için bir adres türü vardır.
+Her nesne türü için ona karşılık gelen bir adres türü vardır.
+
+#### gösterici değişkenler
+Bir gösterici değişken belirli türden bir nesnenin adresini tutabilen bir değişkendir. Bir gösterici değişken aşağıdaki gibi tanımlanabilir:
+
+```
+int *ptr;
+```
+
+Böyle bir değişken için aşağıdaki nitelemeleri kullanabiliriz:
+
+* _ptr_ değişkeninin türü _int *_ türüdür. Bu tür İngilizce'de şöyle ifade edilir: _"pointer to int"_
+* _ptr_ değişkeninin değeri _int_ türden bir nesnenin adresi olacaktır.
+
+Gösterici değişkenlere de diğer tüm değişkenlerde olduğu gibi ilk değer verilebilir:
+
+```
+int main()
+{
+    int x = 10;
+    int y = 20;
+    int *ptr = &x;
+    //...
+    ptr = &y;
+    //...
+}
+```
+
+Yukarıdaki kodda _ptr_ isimli değişken tanımlanıyor ve bu değişkene _&x_ ifadesi ile ilk değer veriliyor.
+
+#### gösterici değişkenlerin bellekte kapladığı alan (storage) 
+
+
 
 
 #### Gösterici Operatörleri (Pointer Operators)
