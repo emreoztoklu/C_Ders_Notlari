@@ -83,26 +83,31 @@ int main()
     printf("x nesnesinin adresi = %p\n", &x);
     printf("ptr değişkeninin değeri = %p\n", ptr);
     printf("ptr nesnesinin adresi = %p\n", &ptr);
-return 0;
 }
 ```
 
-ptr bir nesne olduğu için ptr nesnesi de adres işlecinin terimi olabilir, değil mi? ptr
-nesnesinin değeri olan adres, x nesnesinin adresidir. Ama ptr nesnesinin kendi
-adresinden de söz edilebilir. Bir gösterici değişkenin değeri olan adres ile gösterici
-değişkenin kendi adresi farklı şeylerdir.
+_ptr_ bir nesne olduğu için adres operatörünün terimi olabilir, değil mi? 
+_ptr_ nesnesinin değeri olan adres, _x_ nesnesinin adresidir. 
+Ama _ptr_ nesnesinin kendi adresinden de söz edilebilir. 
+Bir gösterici değişkenin değeri olan adres ile gösterici değişkenin kendi adresi farklı şeylerdir.
+
+```
 printf("ptr nesnesinin adresi = %p\n", &ptr);
+```
+
 çağrısıyla ptr değişkeninin kendi adresi ekrana yazdırılıyor.
-Dizi İsimlerinin Adres Bilgisine Dönüştürülmesi
+
+#### dizi isimlerinin adrese dönüştürülmesi (array decay)
 C dilinde dizi isimleri bir işleme sokulduğunda derleyici tarafından otomatik olarak bir
 adres bilgisine dönüştürülür.
 char s[5];
 gibi bir dizi tanımlamasında sonra, dizinin ismi olan s bir işleme sokulduğunda bu dizinin
 ilk elemanının adresine dönüştürülür.
-Dizi isimleri derleyici tarafından, diziler için bellekte ayrılan blokların başlangıç yerini
-gösteren bir adres bilgisine dönüştürülür. Yukarıdaki örnekte dizinin bellekte aşağıdaki
-şekilde yerleştirildiğini düşünün:
-s[0]
+Dizi isimleri derleyici tarafından, diziler için bellekte ayrılan blokların başlangıç yerini gösteren bir adres bilgisine dönüştürülür. 
+Yukarıdaki örnekte dizinin bellekte aşağıdaki şekilde yerleştirildiğini düşünün:
+
+``` 
+1COOO s[0]
 s[4]
 s[3]
 s[2]
@@ -112,12 +117,17 @@ s[1]
 1C03
 1C02
 1C01
-Bu durumda dizi ismi olan s, char türden 1C00 adresine eşdeğerdir. Yani bu adresi bir
-adres değişmezi şeklinde yazılmış olsaydı:
+```
+
+Bu durumda dizi ismi olan _s_, char türden 1C00 adresine eşdeğerdir. 
+Yani bu adres bir adres sabiti biçiminde  yazılmış olsaydı:
+
+```
 (char *)0x1COO
-C ve Sistem Programcıları Derneği - C Ders Notları - Necati Ergin
-237
+```
+
 biçiminde yazılırdı.
+
 Bu durumda s ifadesi ile &s[0] ifadesi aynı adres bilgisidir, değil mi?
 Gösterici değişkenlere kendi türlerinden bir adres bilgisi atamak gerektiğine göre
 aşağıdaki atamaların hepsi geçerli ve doğrudur:
