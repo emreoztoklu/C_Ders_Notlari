@@ -2,22 +2,24 @@
 
 ### Göstericiler (Pointers)
 
-C dilinde _pointer_ sözcüğü _"adres"_ anlamında kullanılmaktadır. 
+_C_ dilinde _pointer_ sözcüğü _"adres"_ anlamında kullanılmaktadır. 
 Adres donanımsal bir kavram olmakla birlikte birçok programlama dilinin sentaksında yer almaz. 
-C dilinde adresler ve adreslere ytönelik işlemler yoğun olarak kullanılır.
-
+_C_ dilinde ise adresler ve adreslere yönelik işlemler yoğun olarak kullanılır.
+<br>
 Adresler temel olarak iki kategoriye ayrılmaktadır:
-- Nesne adresleri _(object pointers)
-- Fonksiyon adresleri (function pointers)
+- Nesne adresleri _(object pointers)_
+- Fonksiyon adresleri _(function pointers)_
 
-Fonksiyon adreslerini daha sonra ele alacağız.
+Fonksiyon adreslerini daha sonra ele alacağız. </br>
 
-C dilinde bir ifade (expression) bir nesnenin adresi anlamına gelebilir. Bazı ifadelerin değeri adrestir.
-T bir nesnenin türü olmak üzere
-T türünden bir nesnenin adresi anlamına gelen ifadenin türü T * türüdür.
+C dilinde  nesnelerin _(değişkenlerin)_ adresleri değişkenlerde tutulabilir, fonksiyonlara argüman olarak gönderilebilir. Fonksiyonların geri dönüş değeri adres olabilir.
+Bir dizinin elemanları adres tutan değişkenler olabilir. 
 
-Yani _int_ türden bir nesnenin adresi anlamıa gelene bir ifadenin türü _int *_
- doublre  türden bir nesnenin adresi anlamıa gelene bir ifadenin türü _double *_ türüdür
+Bir ifade _(expression)_ bir nesnenin adresi anlamına gelebilir. Yani bazı ifadelerin değeri adrestir. </br>
+_T_ bir nesnenin türü olmak üzere
+_T_ türünden bir nesnenin adresi anlamına gelen ifadenin türü C dilinde _T *_ türü olarak kabul edilir.
+
+Örneğin _int_ türden bir nesnenin adresi anlamına gelene bir ifadenin türü _int *_,  _double_ türden bir nesnenin adresi anlamıa gelene bir ifadenin türü _double *_ türüdür
 
 #### Gösterici Operatörleri (Pointer Operators)
 
