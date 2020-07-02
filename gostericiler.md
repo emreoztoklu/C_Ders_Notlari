@@ -235,3 +235,12 @@ gibi bir dizi tanımlamasında sonra, dizinin ismi olan _str_ bir işleme sokuld
 Bu dönüşüm neticesinde _str_ ifadesi ile _&str[0]_ ifadesi aynı adres olarak kullanılabilir.
 
 Bu durumda bir dizinin adresi bir gösterici değişkene bir dizinin adresi ile ilk değer verilebilir ya da gösterici değişkenlere    
+
+#### içerik operatörü
+
+İçerik operatörü _(indirection operator / dereferencing operator)_ ön ek konumunda kullanılan tek terimli _(unary prefix)_ bir işleçtir. 
+İçerik operatörünün terimi bir adres olmalıdır. 
+Operatörün teriminin bir adres olmaması sentaks hatasıdır.
+içerik operatörü terimi olan adresteki nesneye erişimi sağlar.
+Bir adres ifadesi içerik  operatörünün terimi olduğunda, elde edilen ifade bellekte o adreste bulunan, nesneyi temsil eder. 
+Dolayısıyla, içrik operatörü ile oluşturulan bir ifade bir nesneye karşılık gelir, sol taraf değeri olarak kullanılabilir.
