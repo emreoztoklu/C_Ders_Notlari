@@ -272,12 +272,12 @@ Yani _ptr_ _ival_'i göstermektedir. Bu durumda _*ptr_ ifadesi _ival_ değişken
 
 deyimi ile atama _ival_ değişkenine yapılmıştır.
 
-_*a_ ifadesinde dizi ismi olan _a_ dizinin ilk elemanının adresine dönüştürülür. _(array decay)_ Bu durumda içerik operatörü ile dizimnin ilk elemanına erişilir. 
+_*a_ ifadesinde dizi ismi olan _a_ dizinin ilk elemanının adresine dönüştürülür. _(array decay)_ Bu durumda içerik operatörü ile a dizisinin ilk elemanına erişilir. 
 ```
 *a = 45;
 ```
 
 deyimi ile atama _a_ dizisinin ilk elemanına yapılmaktdır
 
-a bir dizinin ismi olmak üzere C dilinde a[0] ifadesini yazmak ile _*a_ ifadesini yazmak aynı anlama gelir.
+_a? bir dizinin ismi olmak üzere _C_ dilinde _a[0]_ ifadesini yazmak ile _*a_ ifadesini yazmak aynı anlama gelir.
 
