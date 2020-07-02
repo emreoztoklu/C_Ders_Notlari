@@ -266,6 +266,7 @@ int main()
 
 _*ptr_ ifadesi ele alınırken _ptr_'nin değeri _ival_'in adresidir. 
 Yani _ptr_ _ival_'i göstermektedir. Bu durumda _*ptr_ ifadesi _ival_ değişkenin kendisi anlamına gelir.
+
 ```
 *ptr = 25;
 ```
@@ -279,5 +280,11 @@ _*a_ ifadesinde dizi ismi olan _a_ dizinin ilk elemanının adresine dönüştü
 
 deyimi ile atama _a_ dizisinin ilk elemanına yapılmaktdır
 
-_a? bir dizinin ismi olmak üzere _C_ dilinde _a[0]_ ifadesini yazmak ile _*a_ ifadesini yazmak aynı anlama gelir.
+_a_ bir dizinin ismi olmak üzere _C_ dilinde _a[0]_ ifadesi ile _*a_ ifadesi aynı anlama gelir.
+Şimdi de _*&ival_ ifadesine bakalım. Burada içerik operatörünün operandı _&ival_ ifadesidir. 
+```
+*&ival = 75;
+```
+deyimi ile atama _ival_ değişkenine yapılmıştır. Tabi böyle bir deyim yazmak gerekmez.  
+
 
