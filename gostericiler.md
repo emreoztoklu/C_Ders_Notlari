@@ -238,9 +238,46 @@ Bu durumda bir dizinin adresi bir gösterici değişkene bir dizinin adresi ile 
 
 #### içerik operatörü
 
-İçerik operatörü _(indirection operator / dereferencing operator)_ ön ek konumunda kullanılan tek terimli _(unary prefix)_ bir işleçtir. 
-İçerik operatörünün terimi bir adres olmalıdır. 
-Operatörün teriminin bir adres olmaması sentaks hatasıdır.
-içerik operatörü terimi olan adresteki nesneye erişimi sağlar.
-Bir adres ifadesi içerik  operatörünün terimi olduğunda, elde edilen ifade bellekte o adreste bulunan, nesneyi temsil eder. 
-Dolayısıyla, içrik operatörü ile oluşturulan bir ifade bir nesneye karşılık gelir, sol taraf değeri olarak kullanılabilir.
+İçerik operatörü _(indirection operator / dereferencing operator)_ ön ek konumunda kullanılan tek terimli _(unary prefix)_ bir operatördür. 
+İçerik operatörünün terimi bir adres olmalıdır. Operatörün teriminin bir adres olmaması sentaks hatasıdır.İçerik operatörü terimi olan adresteki nesneye erişimi sağlar:
+```
+*adres
+```
+gibi bir ifade o adresteki nesne anlamına gelir ve böyle bir ifade bir sol taraf değeridir.
+Aşağıdaki C kodunda yapılan atamalara bakalım:
+
+```
+#include <stdio.h>
+
+int main()
+{
+	int ival = 10;
+	int *ptr = &ival;
+	int a[5] = { 1, 2, 3, 4, 5 };
+
+	*ptr = 24;
+	printf("ival = %d\n", ival);
+	*a = 45;
+	printf("a[0] = %d\n", a[0]);
+	*&ival = 75;
+	printf("ival = %d\n", ival);
+}
+```
+
+_*ptr_ ifadesi ele alınırken _ptr_'nin değeri _ival_'in adresidir. 
+Yani _ptr_ _ival_'i göstermektedir. Bu durumda _*ptr_ ifadesi _ival_ değişkenin kendisi anlamına gelir.
+```
+*ptr = 25;
+```
+
+deyimi ile atama _ival_ değişkenine yapılmıştır.
+
+_*a_ ifadesinde dizi ismi olan _a_ dizinin ilk elemanının adresine dönüştürülür. _(array decay)_ Bu durumda içerik operatörü ile dizimnin ilk elemanına erişilir. 
+```
+*a = 45;
+```
+
+deyimi ile atama _a_ dizisinin ilk elemanına yapılmaktdır
+
+a bir dizinin ismi olmak üzere C dilinde a[0] ifadesini yazmak ile _*a_ ifadesini yazmak aynı anlama gelir.
+
