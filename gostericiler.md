@@ -287,4 +287,16 @@ _a_ bir dizinin ismi olmak üzere _C_ dilinde _a[0]_ ifadesi ile _*a_ ifadesi ay
 ```
 deyimi ile atama _ival_ değişkenine yapılmıştır. Tabi böyle bir deyim yazmak gerekmez.  
 
+#### pointer değişkenlerin bildirimi ve const anahtar sözcüğü
 
+#### pointer aritmetiği
+
+#### indeks operatörü
+
+#### pointer idiyomları
+
+#### geçerli ve geçersiz göstericiler (valid & invalid pointers)
+
+#### adres döndüren fonksiyonlar
+
+#### NULL pointer 
