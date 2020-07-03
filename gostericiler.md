@@ -301,6 +301,40 @@ Geçerli bu işlemlerin ürettiği değer adrestir.
 * Bir tam sayıdan bir adresin çıkartılması geçersizdir.
 * İki adresin toplanması geçersizdir.
 
+Bir dizinin bir elemanının adresine _1_ toplandığında dizinin bir sonraki elemanının adresi elde edilir. Bir dizinin bir elemanının adresinden _1_ çıkartıldığında dizinin bir önceki elemanının adresi elde edilir. Dizinin elemanlarının türü ne olursa olsun bu kural geçerlidir.
+
+_a_ bir dizi ve _idx_ dizinin bir elemanının indeksi olmak üzere
+
+```
+&a[idx]
+```
+
+ifadesi ile
+
+```
+a + idx
+```
+
+ifadesi aynı anlama gelir.
+
+Aşağıdaki kodu derleyip çalıştırın:
+
+```
+#include <stdio.h>
+
+int main()
+{
+	int a[10] = { 0 };
+
+	for (int i = 0; i < 10; ++i)
+		printf("%p %p\n", &a[i], a + i);
+}
+```
+
+Şimdi de yukarıdaki kodda dizinin türünü sırasıyla _char, short_, ve _double_ olacak şekilde değiştirip her farklı dizi türü için kodu tekrar derleyip çalıştırın.
+
+
+
 #### indeks operatörü
 
 #### pointer idiyomları
