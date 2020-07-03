@@ -333,6 +333,21 @@ int main()
 
 Şimdi de yukarıdaki kodda dizinin türünü sırasıyla _char, short_, ve _double_ olacak şekilde değiştirip her farklı dizi türü için kodu tekrar derleyip çalıştırın.
 
+Bir gösterici değişkenin _++_ operatörünün terimi olması ne anlama gelir? 
+_ptr_ bir dizinin bir elemanını gösteriyor olsun. 
+Yani _ptr_ değişkeninin değeri dizinin bir elemanının adresi olsun.
+
+```
+++ptr;
+```
+
+deyimi ile _ptr_'nin değeri _1_ artar, yani _ptr_ dizinin bir sonraki elemanını gösterir hale gelir. Yine 
+
+```
+--ptr;
+```
+
+deyimi ile _ptr_'nin değeri _1_ azalır, yani _ptr_ dizinin bir önceki elemanını gösterir hale gelir.
 
 
 #### indeks operatörü
