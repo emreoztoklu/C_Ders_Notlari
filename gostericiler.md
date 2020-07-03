@@ -5,7 +5,6 @@
 _C_ dilinde _pointer_ sözcüğü _"adres"_ anlamında kullanılmaktadır. 
 Adres donanımsal bir kavram olmakla birlikte birçok programlama dilinin sentaksında yer almaz. 
 _C_ dilinde ise adresler ve adreslere yönelik işlemler yoğun olarak kullanılır. 
-
 <br>
 Adresler temel olarak iki kategoriye ayrılmaktadır:
 
