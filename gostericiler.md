@@ -290,6 +290,16 @@ deyimi ile atama _ival_ değişkenine yapılmıştır. Tabi böyle bir deyim yaz
 #### pointer değişkenlerin bildirimi ve const anahtar sözcüğü
 
 #### pointer aritmetiği
+_C_ dilinde 
+
+* bir adresle bir tam sayı toplanabilir. 
+* bir tam sayı ile bir adres toplanabilir.
+* bir adresten bir tam sayı çıkartılabilir.
+
+Geçerli bu işlemlerin ürettiği değer adrestir.  
+
+* Bir tam sayıdan bir adresin çıkartılması geçersizdir.
+* İki adresin toplanması geçersizdir.
 
 #### indeks operatörü
 
